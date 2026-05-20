@@ -8,7 +8,17 @@ int main (int argc, char *argv[]) {
       suma += notas [i];
     }
     float promedio=suma/5.0f;
-    printf("promedio:%.2f\n",promedio);
+    printf("promedio:%.2f\n",calcularPromedio(notas));
 
     return 0;
+}
+float calcularPromedio(float notas[5]){
+    float suma=0;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("notas[%d] %.1f\n", i, notas[i]);
+        suma += notas[i];
+    }
+    float promedio=suma/5.0f;
+    return promedio;
 }
